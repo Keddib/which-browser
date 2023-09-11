@@ -8,7 +8,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  publish-npm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,20 +17,11 @@ jobs:
           version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
           cach: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm run ci
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
       - run: pnpm semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
