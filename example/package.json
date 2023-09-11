@@ -1,0 +1,26 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -p esmify > dist/bundle.js",
+    "watch": "watchify index.js -o dist/bundle.js -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "reading-time": "^1.5.0",
+    "watchify": "^4.0.0",
+    "which-browser-js": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.15",
+    "babel-core": "^6.26.3",
+    "babelify": "^10.0.0",
+    "esmify": "^2.1.1"
+  },
+  "browserslist": "> 0.25%, not dead"
+}
