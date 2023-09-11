@@ -9,7 +9,8 @@
     "dev": "vitest",
     "test": "vitest run",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "ci": "npm run lint && npm run test && npm run build"
   },
   "keywords": [],
   "author": "keddib",
