@@ -1,7 +1,7 @@
 {
   "name": "which-browser",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.0-development",
+  "description": "which-browser is a TypeScript for identifying the browser environment in which your client-side code is running.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -10,14 +10,28 @@
     "test": "vitest run",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
-    "ci": "npm run lint && npm run test && npm run build"
+    "ci": "npm run lint && npm run test && npm run build",
+    "semantic-release": "semantic-release",
+    "commit": "cz"
   },
   "keywords": [],
   "author": "keddib",
   "license": "MIT",
   "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^21.1.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Keddib/which-browser.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
