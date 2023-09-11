@@ -36,7 +36,7 @@ pnpm add which-browser-js
 ```javascript
 import { whichBrowser, isChrome } from 'which-browser-js';
 
-const browserName = detectBrowser();
+const browserName = whichBrowser();
 console.log(`You are using ${browserName}`);
 
 if (isChrome(browserName)) {
