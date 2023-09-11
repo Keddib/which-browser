@@ -1,13 +1,7 @@
-import { Browser } from "./types";
+import { whichBrowser } from './browser'
 
-const whichBrowser = () : Browser => {
-  return 'browser';
-};
-
-const isSafari = (brw: Browser): boolean => brw === 'safari';
-
+export * from './utils';
 
 export {
   whichBrowser,
-  isSafari,
 }
