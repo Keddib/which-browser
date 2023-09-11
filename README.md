@@ -42,3 +42,23 @@ console.log(`You are using ${browserName}`);
 if (isChrome(browserName)) {
   console.log('we are in Chrome :D');
 }
+```
+
+**Inside a react hook:**
+
+```reactjs
+
+impoer { BrowserType, whichBrowser } from 'which-browser-js';
+
+const useWhichBrowser = () => {
+  const [browser, setBrowser] = useState<BrowserType>(BrowserType.Browser);
+
+  useEffect(() => {
+    const brw = whichBrowser();
+    setBrowser(brw);
+  }, []);
+
+  return browser;
+};
+
+```
