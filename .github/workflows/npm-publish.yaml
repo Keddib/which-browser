@@ -21,7 +21,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cach: "pnpm"
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run ci
+      - run: pnpm ci
       - run: pnpm semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
