@@ -1,7 +1,7 @@
 {
-  "name": "which-browser",
+  "name": "which-browser-js",
   "version": "0.0.0-development",
-  "description": "which-browser is a TypeScript for identifying the browser environment in which your client-side code is running.",
+  "description": "which-browser-js is a TypeScript for identifying the browser environment in which your client-side code is running.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
